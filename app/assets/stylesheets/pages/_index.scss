@@ -1,0 +1,31 @@
+// Import page-specific CSS files here.
+@import "home";
+
+.container {
+  width: 80%;  /* Largeur du container */
+  max-width: 1200px; /* Largeur maximale */
+  margin: 0 auto;  /* Centre le container horizontalement */
+  padding: 20px;  /* Espacement intérieur */
+}
+
+
+.movies-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 200px;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.movie-image {
+  width: 100%; /* Prend toute la largeur de la carte */
+  height: 150px; /* Réduit la hauteur */
+  object-fit: cover; /* Coupe l'image pour garder un bon ratio */
+  border-radius: 8px; /* Coins arrondis */
+}
+
+.film-info {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}

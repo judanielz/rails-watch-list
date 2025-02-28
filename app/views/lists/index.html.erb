@@ -1,0 +1,19 @@
+<div class="navbar">
+ <%= link_to "Créer une nouvelle liste", new_list_path %></div>
+
+<div class="container">
+
+<div class="banner">
+  <%= image_tag "affiche.png", alt: "Movie Banner", class: "banner-image"
+  %>
+</div>
+
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list)%></li>
+  <% end %>
+</ul>
+
+
+
+</div>

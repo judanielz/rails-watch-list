@@ -1,0 +1,36 @@
+// Specific CSS for your home-page
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(229, 223, 223);
+  padding: 30px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 80%;  /* Largeur du container */
+  max-width: 1200px; /* Largeur maximale */
+  margin: 0 auto;  /* Centre le container horizontalement */
+  padding: 20px;  /* Espacement intérieur */
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  width: 100%
+}
+
+$gray: #F4F4F4; // Defining a variable
+$spacer: 8px;
+
+body {
+  background: $gray; // Using this variable
+}
+
+p {
+  padding: $spacer ($spacer * 3);
+}
