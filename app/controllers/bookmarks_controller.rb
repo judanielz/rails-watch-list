@@ -1,3 +1,4 @@
+
 class BookmarksController < ApplicationController
 
   def new
@@ -7,11 +8,13 @@ class BookmarksController < ApplicationController
 
   def create
     @list = List.find(params[:list_id])
-    @bookmark = Bookmark.new(bookmark_params)
-    @bookmark.list = @list
+    @bookmark = @list.bookmarks.new(bookmark_params)
+
     if @bookmark.save
-      redirect_to list_path(@list)
+      redirect_to @list, notice: 'Bookmark was successfully created.'
     else
+      Rails.logger.error @bookmark.errors.full_messages.join(', ') # Log les erreurs
+      @movies = Movie.all
       render :new, status: :unprocessable_entity
     end
   end
